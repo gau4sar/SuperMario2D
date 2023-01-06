@@ -212,6 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b01cd06a9206499dde9d5971435de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
   deathSoundEffect: {fileID: 3330310178036362839}
   restartSoundEffect: {fileID: 3330310178036362838}
 --- !u!82 &3330310178036362836
