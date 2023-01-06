@@ -16,7 +16,7 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("Player") && !levelCompleted)
+        if (collision.gameObject.tag.Equals("Player") && !levelCompleted)
         {
             finishSoundEffect.Play();
             levelCompleted = true;
