@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     Animator playerAnim;
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D rb;
 
     [SerializeField] private AudioSource deathSoundEffect;
     [SerializeField] private AudioSource restartSoundEffect;
@@ -15,7 +15,7 @@ public class PlayerLife : MonoBehaviour
     void Start()
     {
         playerAnim = GetComponent<Animator>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,7 +30,7 @@ public class PlayerLife : MonoBehaviour
     {
         deathSoundEffect.Play();
         playerAnim.SetTrigger("death");
-        rigidbody2D.bodyType = RigidbodyType2D.Static;
+        rb.bodyType = RigidbodyType2D.Static;
     }
 
     private void Restart()
